@@ -32,16 +32,12 @@ cd Lib_management
 
 3. Activate the virtual environment:
 
-   On windows:
-
 ```bash
-venv\Scripts\activate
+venv\Scripts\activate #Window
 ```
 
-   On Mac:
-
 ```bash
-source venv\Scripts\activate
+source venv\Scripts\activate #Mac
 ```
 
 4. Install the required dependencies:
@@ -75,6 +71,7 @@ flask db upgrade
 ```bash
 python app.py
 ```
+Open your browser and Postman and visit http://localhost:5000/ to start using the application.
 
 # API Endpoints:
 
@@ -96,6 +93,97 @@ Response:
 ```json
 {
     "message": "Signup successful"
+}
+```
+
+POST api/auth/login: Logs in a user and returns a JWT token.
+
+```json
+{
+    "username": "your_username",
+    "password": "your_password"
+}
+```
+
+Response:
+
+```json
+{
+    "access_token": "your_jwt_token"
+}
+```
+
+## 2. Book Management:
+
+POST /books: Adds a new book. Requires JWT authentication.
+```http
+POST /books/
+Authorization: Bearer <JWT_TOKEN>
+Content-Type: application/json
+```
+
+Payload:
+
+```json
+{
+  "title": "Book Title",
+  "author": "Author Name",
+  "genre": "Genre (optional)"
+}
+```
+Response:
+```json
+{
+  "message": "Book added successfully",
+  "book_id": 1
+}
+```
+List All Books (GET):
+
+```http
+GET /books/
+Authorization: Bearer <JWT_TOKEN>
+```
+Query Parameters:
+
+page (optional): Page number (default: 1)
+limit (optional): Number of items per page (default: 10)
+
+Response:
+
+```json
+{
+  "books": [
+    {"id": 1, "title": "Book Title", "author": "Author Name", "genre": "Genre"}
+  ],
+  "total": 1,
+  "page": 1,
+  "pages": 1,
+  "limit": 10
+}
+```
+Update a Book (PUT):
+
+```http
+PUT /books/<book_id>
+Authorization: Bearer <JWT_TOKEN>
+Content-Type: application/json
+```
+
+Request Body:
+
+``json
+{
+  "title": "Updated Title",
+  "author": "Updated Author",
+  "genre": "Updated Genre"
+}
+```
+Response:
+
+```json
+{
+  "message": "Book updated successfully"
 }
 ```
 

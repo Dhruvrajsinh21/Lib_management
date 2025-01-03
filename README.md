@@ -132,7 +132,7 @@ Response:
 }
 ```
 
-## 2. Book Management API Endpoints:
+## 2. Book Management API Endpoints
 
 - POST api/books: Adds a new book. Requires JWT authentication.
 ```http

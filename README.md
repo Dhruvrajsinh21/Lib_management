@@ -22,7 +22,7 @@ This is a Flask-based application providing REST APIs for managing books, member
 ```plaintext
 library_management/
 ├── app/
-│   ├── __init__.py
+│   ├── app.py
 │   ├── authentication.py
 │   ├── book.py
 │   ├── member.py
@@ -30,7 +30,6 @@ library_management/
 │   ├── routes.py
 │   └── models.py
 ├── migrations/
-├── run.py
 └── requirements.txt
 ```
 

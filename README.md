@@ -9,7 +9,7 @@ This is a Flask-based application providing REST APIs for managing books, member
 - **Member Management**: User can register, update, delete, and list members.
 - **JWT Authentication**: All routes related to book management and member management require JWT authentication.
 - **Organized Code**: Functions are divided into separate files for better scalability and readability.
-- 
+  
 # Required Python libraries:
 
 1. Flask

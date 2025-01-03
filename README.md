@@ -113,7 +113,7 @@ Response:
 }
 ```
 
-## 2. Book Management:
+## 2. Book Management API Endpoints:
 
 POST /books: Adds a new book. Requires JWT authentication.
 ```http
@@ -146,8 +146,8 @@ Authorization: Bearer <JWT_TOKEN>
 ```
 Query Parameters:
 
-page (optional): Page number (default: 1)
-limit (optional): Number of items per page (default: 10)
+- page (optional): Page number (default: 1)
+- limit (optional): Number of items per page (default: 10)
 
 Response:
 
@@ -170,9 +170,9 @@ Authorization: Bearer <JWT_TOKEN>
 Content-Type: application/json
 ```
 
-Request Body:
+Payload:
 
-``json
+```json
 {
   "title": "Updated Title",
   "author": "Updated Author",
@@ -186,6 +186,104 @@ Response:
   "message": "Book updated successfully"
 }
 ```
+Delete a Book (DELETE):
+
+```http
+DELETE /books/<book_id>
+Authorization: Bearer <JWT_TOKEN>
+```
+Response:
+
+```json
+{
+  "message": "Book deleted successfully"
+}
+```
+## 3. Member Management API Endpoints
+
+Register a Member (POST)
+
+```http
+POST /members/
+Authorization: Bearer <JWT_TOKEN>
+Content-Type: application/json
+```
+
+Payload:
+```json
+{
+  "name": "Dhruvrajsinh",
+  "email": "dhruvrajsinh251103@gmail.com"
+}
+```
+Response:
+```json
+{
+  "message": "Member registered successfully"
+}
+```
+
+List All Members (GET)
+```http
+GET /members/
+Authorization: Bearer <JWT_TOKEN>
+```
+
+Query Parameters:
+
+- page (optional): Page number (default: 1)
+- limit (optional): Number of items per page (default: 10)
+
+Response:
+
+```json
+{
+  "members": [
+    {"id": 1, "name": "Dhruvrajsinh", "email": "dhruvrajsinh251103@gmail.com"}
+  ],
+  "total": 1,
+  "page": 1,
+  "pages": 1,
+  "limit": 10
+}
+```
+Update Member Details (PUT):
+```http
+PUT /members/<member_id>
+Authorization: Bearer <JWT_TOKEN>
+Content-Type: application/json
+```
+Payload:
+```json
+{
+  "name": "Jane Doe",
+  "email": "jane.doe@example.com"
+}
+```
+
+Response:
+
+```json
+{
+  "message": "Member updated successfully"
+}
+```
+
+Delete a Member (DELETE):
+```http
+DELETE /members/<member_id>
+Authorization: Bearer <JWT_TOKEN>
+```
+
+Response:
+```json
+{
+  "message": "Member deleted successfully"
+}
+```
+
+
+
 
 
 

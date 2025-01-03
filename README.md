@@ -22,8 +22,9 @@ This is a Flask-based application for managing books, members, and users with JW
 
 ```bash
 git clone https://github.com/Dhruvrajsinh21/Lib_management
+```
 
-## 2. Change into the project directory:
+2. Change into the project directory:
 
 ```bash
 cd Lib_management

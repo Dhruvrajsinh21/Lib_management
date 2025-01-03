@@ -50,7 +50,7 @@ cd Lib_management
 3. Activate the virtual environment:
 
 ```bash
-venv\Scripts\activate #Window
+venv\Scripts\activate #Windows
 ```
 
 ```bash

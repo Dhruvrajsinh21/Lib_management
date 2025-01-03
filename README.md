@@ -28,6 +28,7 @@ git clone https://github.com/Dhruvrajsinh21/Lib_management
 
 ```bash
 cd Lib_management
+```
 
 3. Activate the virtual environment:
 
@@ -35,37 +36,45 @@ On windows:
 
 ```bash
 venv\Scripts\activate
+```
 
 On Mac:
 
 ```bash
 source venv\Scripts\activate
+```
 
 4. Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
 
 5. Change into the app directory:
 
 ```bash
 cd app
+```
 
 6. Set up the database:
 
 ```bash
 python create_db.py
+```
+This will create the SQLite database (library.db) with the necessary tables as defined in the models.py file.
 
 7. Migrate the database:
 
 ```bash
 flask db migrate
 flask db upgrade
+```
 
 8. Run the Flask app:
 
 ```bash
 python app.py
+```
 
 # API Endpoints:
 
@@ -80,12 +89,15 @@ Request body (payload):
     "username": "your_username",
     "password": "your_password"
 }
+```
 
 Response:
+
 ```json
 {
     "message": "Signup successful"
 }
+```
 
 
 

@@ -1,6 +1,6 @@
 # Library Management
 
-This is a Flask-based application providing REST APIs for managing books, members, and user authentication with secure JWT token-based authentication. The app includes functionalities for user sign-up and login, as well as APIs for adding, updating, deleting, and listing books and members.
+This is a Flask-based backend providing REST APIs for managing books, members, and user authentication with secure JWT token-based authentication. The app includes functionalities for user sign-up and login, as well as APIs for adding, updating, deleting, and listing books and members.
 
 # Functionalities:
 
@@ -119,8 +119,8 @@ Payload:
 
 ```json
 {
-    "username": "your_username",
-    "password": "your_password"
+    "username": "username",
+    "password": "password"
 }
 ```
 
@@ -128,7 +128,7 @@ Response:
 
 ```json
 {
-    "access_token": "your_jwt_token"
+    "access_token": "jwt_token"
 }
 ```
 

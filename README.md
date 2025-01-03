@@ -79,7 +79,7 @@ Open your browser and Postman and visit http://localhost:5000/ to start using th
 
 - POST api/auth/signup
 
-Request body (payload):
+Request body (Payload):
 
 ```json
 {
@@ -97,6 +97,8 @@ Response:
 ```
 
 - POST api/auth/login: Logs in a user and returns a JWT token.
+
+Payload:
 
 ```json
 {

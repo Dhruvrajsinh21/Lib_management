@@ -77,7 +77,7 @@ Open your browser and Postman and visit http://localhost:5000/ to start using th
 
 ## 1. User Authentication
 
-POST api/auth/signup
+- POST api/auth/signup
 
 Request body (payload):
 
@@ -96,7 +96,7 @@ Response:
 }
 ```
 
-POST api/auth/login: Logs in a user and returns a JWT token.
+- POST api/auth/login: Logs in a user and returns a JWT token.
 
 ```json
 {
@@ -115,9 +115,9 @@ Response:
 
 ## 2. Book Management API Endpoints:
 
-POST /books: Adds a new book. Requires JWT authentication.
+- POST api/books: Adds a new book. Requires JWT authentication.
 ```http
-POST /books/
+POST api/books/
 Authorization: Bearer <JWT_TOKEN>
 Content-Type: application/json
 ```
@@ -138,10 +138,10 @@ Response:
   "book_id": 1
 }
 ```
-List All Books (GET):
+- List All Books (GET):
 
 ```http
-GET /books/
+GET api/books/
 Authorization: Bearer <JWT_TOKEN>
 ```
 Query Parameters:
@@ -162,10 +162,10 @@ Response:
   "limit": 10
 }
 ```
-Update a Book (PUT):
+- Update a Book (PUT):
 
 ```http
-PUT /books/<book_id>
+PUT api/books/<book_id>
 Authorization: Bearer <JWT_TOKEN>
 Content-Type: application/json
 ```
@@ -186,10 +186,10 @@ Response:
   "message": "Book updated successfully"
 }
 ```
-Delete a Book (DELETE):
+- Delete a Book (DELETE):
 
 ```http
-DELETE /books/<book_id>
+DELETE api/books/<book_id>
 Authorization: Bearer <JWT_TOKEN>
 ```
 Response:
@@ -201,10 +201,10 @@ Response:
 ```
 ## 3. Member Management API Endpoints
 
-Register a Member (POST)
+- Register a Member (POST)
 
 ```http
-POST /members/
+POST api/members/
 Authorization: Bearer <JWT_TOKEN>
 Content-Type: application/json
 ```
@@ -223,9 +223,9 @@ Response:
 }
 ```
 
-List All Members (GET)
+- List All Members (GET)
 ```http
-GET /members/
+GET api/members/
 Authorization: Bearer <JWT_TOKEN>
 ```
 
@@ -247,9 +247,9 @@ Response:
   "limit": 10
 }
 ```
-Update Member Details (PUT):
+- Update Member Details (PUT):
 ```http
-PUT /members/<member_id>
+PUT api/members/<member_id>
 Authorization: Bearer <JWT_TOKEN>
 Content-Type: application/json
 ```
@@ -269,9 +269,9 @@ Response:
 }
 ```
 
-Delete a Member (DELETE):
+- Delete a Member (DELETE):
 ```http
-DELETE /members/<member_id>
+DELETE api/members/<member_id>
 Authorization: Bearer <JWT_TOKEN>
 ```
 

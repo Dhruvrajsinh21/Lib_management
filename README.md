@@ -1,20 +1,38 @@
-# Library Management System
+# Library Management
 
-This is a Flask-based application for managing books, members, and users with JWT authentication. The app allows users to sign up, log in, add books, and manage members, all with secure JWT token-based authentication.
+This is a Flask-based application providing REST APIs for managing books, members, and user authentication with secure JWT token-based authentication. The app includes functionalities for user sign-up and login, as well as APIs for adding, updating, deleting, and listing books and members.
 
-# Features:
+# Functionalities:
 
 - **User Authentication**: Users can log in and receive a JWT token for authentication.
 - **Book Management**: User can add, update, list, and delete books.
 - **Member Management**: User can register, update, delete, and list members.
 - **JWT Authentication**: All routes related to book management and member management require JWT authentication.
-
+- **Organized Code**: Functions are divided into separate files for better scalability and readability.
+- 
 # Required Python libraries:
 
 1. Flask
 2. Flask-SQLAlchemy
 3. Flask-JWT-Extended
 5. SQLite (default database)
+
+# Project Structure:
+
+```plaintext
+library_management/
+├── app/
+│   ├── __init__.py
+│   ├── authentication.py
+│   ├── book.py
+│   ├── member.py
+│   ├── create_db.py
+│   ├── routes.py
+│   └── models.py
+├── migrations/
+├── run.py
+└── requirements.txt
+```
 
 # Installation:
 

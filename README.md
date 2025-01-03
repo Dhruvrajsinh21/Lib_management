@@ -32,13 +32,13 @@ cd Lib_management
 
 3. Activate the virtual environment:
 
-On windows:
+   On windows:
 
 ```bash
 venv\Scripts\activate
 ```
 
-On Mac:
+   On Mac:
 
 ```bash
 source venv\Scripts\activate
@@ -60,8 +60,8 @@ cd app
 
 ```bash
 python create_db.py
+#This will create the SQLite database (library.db) with the necessary tables as defined in the models.py file.
 ```
-This will create the SQLite database (library.db) with the necessary tables as defined in the models.py file.
 
 7. Migrate the database:
 
